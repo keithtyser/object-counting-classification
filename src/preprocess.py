@@ -18,6 +18,9 @@ def preprocess_image(image):
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
     
     # Apply contrast enhancement using histogram equalization
-    enhanced = cv2.equalizeHist(blurred)
+    enhanced_gray = cv2.equalizeHist(blurred)
+    
+    # Convert back to three channels
+    enhanced = cv2.cvtColor(enhanced_gray, cv2.COLOR_GRAY2BGR)
     
     return enhanced

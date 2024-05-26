@@ -4,8 +4,14 @@ import numpy as np
 import os
 
 def load_yolo_model():
-    net = cv2.dnn.readNet(os.path.join('..', 'models', 'yolov3.weights'), os.path.join('..', 'models', 'yolov3.cfg'))
-    with open(os.path.join('..', 'models', 'coco.names'), 'r') as f:
+    # Use absolute paths for better reliability
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    weights_path = os.path.join(current_dir, '..', 'models', 'yolov3.weights')
+    config_path = os.path.join(current_dir, '..', 'models', 'yolov3.cfg')
+    names_path = os.path.join(current_dir, '..', 'models', 'coco.names')
+
+    net = cv2.dnn.readNet(weights_path, config_path)
+    with open(names_path, 'r') as f:
         classes = f.read().strip().split('\n')
     return net, classes
 
