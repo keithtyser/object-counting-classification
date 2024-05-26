@@ -1,5 +1,4 @@
 # src/output.py
-
 import cv2
 
 def draw_output(image, classified_objects, counts):
@@ -32,11 +31,11 @@ def generate_report(all_counts):
     Generate and print a summary report of the counts.
 
     Parameters:
-    - all_counts: List of dictionaries with counts of each object type for all images.
+    - all_counts: Dictionary with image file names as keys and counts as values.
     """
     total_counts = {'person': 0, 'bicycle': 0, 'car': 0}
 
-    for counts in all_counts:
+    for counts in all_counts.values():
         for key, value in counts.items():
             total_counts[key] += value
 
