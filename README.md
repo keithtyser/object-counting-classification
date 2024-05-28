@@ -12,10 +12,11 @@ This project is a Python-based application that uses computer vision techniques 
 
 ## Requirements
 - Python 3.x
-- OpenCV
-- NumPy
-- tqdm
-- Matplotlib
+- Libraries:
+  - opencv-python
+  - numpy
+  - tqdm
+  - matplotlib
 
 ## Setup
 1. **Clone the repository**:
