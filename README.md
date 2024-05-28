@@ -19,15 +19,15 @@ This project is a Python-based application that uses computer vision techniques 
 
 ## Setup
 1. **Clone the repository**:
-'''
+```
 git clone https://github.com/yourusername/object-counting-classification.git
 cd object-counting-classification
-'''
+```
 
 2. **Install the required packages**:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 3. **Download YOLO weights and configuration files**:
     - Download the YOLOv3 weights from [here](https://pjreddie.com/media/files/yolov3.weights) and place it in the `models` directory.
@@ -38,9 +38,9 @@ pip install -r requirements.txt
 
 ## Usage
 1. **Run the main script**:
-'''
+```
 python src/main.py
-'''
+```
 
 
 2. **Output**:
