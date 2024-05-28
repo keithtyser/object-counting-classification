@@ -31,10 +31,11 @@ pip install -r requirements.txt
 
 3. **Download YOLO weights and configuration files**:
     - Download the YOLOv3 weights from [here](https://pjreddie.com/media/files/yolov3.weights) and place it in the `models` directory.
-    - Ensure `yolov3.cfg` and `coco.names` are also in the `models` directory.
+    - Download the YOLOv3 configuration file (`yolov3.cfg`) from [here](https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg) and place it in the `models` directory.
+    - Download the COCO class names file (`coco.names`) from [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names) and place it in the `models` directory.
 
-4. **Prepare the dataset**:
-    - Place your test images in the `data/test_images/val2017` directory.
+4. **Download the dataset**:
+    - Download the COCO dataset from [here](https://cocodataset.org/#download) and place the test images in the `data/test_images/val2017` directory.
 
 ## Usage
 1. **Run the main script**:
